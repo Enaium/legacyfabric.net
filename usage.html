@@ -53,7 +53,7 @@
             <pre><code class="properties hljs">    <span class="hljs-attr">minecraft_version</span>=<span class="hljs-string" id="properties-version">{minecraft_version}</span>
     <span class="hljs-attr">yarn_build</span>=<span class="hljs-string" id="properties-mapping">{mappings_build}</span>
     <span class="hljs-attr">loader_version</span>=<span class="hljs-string" id="properties-loader">{loader_version}</span>
-    <span class="hljs-attr">loom_version</span>=<span class="hljs-string" id="properties-loom">1.11-SNAPSHOT</span><span id="properties-api-section" hidden>
+    <span class="hljs-attr">loom_version</span>=<span class="hljs-string" id="properties-loom">1.15-SNAPSHOT</span><span id="properties-api-section" hidden>
 
     # Legacy Fabric API
     <span class="hljs-attr">fabric_version</span>=<span class="hljs-string" id="properties-api">{api_version}</span></span>
@@ -186,7 +186,7 @@
             })
         });
 
-        fetch("https://api.modrinth.com/v2/project/legacy-fabric-api/version")
+        fetch("https://api.modrinth.com/v2/project/legacy-fabric-api/version?loaders=[%22legacy-fabric%22]")
             .then(function(response) {
                 return response.json();
             }).then(function(json) {
